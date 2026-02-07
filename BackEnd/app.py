@@ -38,12 +38,16 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 try:
-    model = genai.GenerativeModel("gemini-1.5-pro")
-    if model is None:
-    raise RuntimeError("Gemini model failed to initialize. Check model name or API key.")
+    model = genai.GenerativeModel("models/gemini-1.5-pro")
+    print("Gemini model initialized successfully")
 except Exception as e:
     print("Error initializing Gemini:", e)
     model = None
+
+if model is None:
+    raise RuntimeError(
+        "Gemini model failed to initialize. Check model name or API key."
+    )
 
 # Initialize Flask
 app = Flask(__name__)
