@@ -38,7 +38,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 try:
-    model = genai.GenerativeModel("gemini-3-flash-latest")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 except Exception as e:
     print("Error initializing Gemini:", e)
     model = None
