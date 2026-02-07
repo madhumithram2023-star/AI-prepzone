@@ -9,10 +9,10 @@ from google.cloud import dialogflow_v2 as dialogflow
 import google.generativeai as genai
 from dotenv import load_dotenv
 
-# --- INITIAL SETUP & COFIGURATION ---
+
 load_dotenv()
 
-# Load Google Credentials for Dialogflow
+
 if "GOOGLE_APPLICATION_CREDENTIALS_JSON" in os.environ:
     try:
         cred_data = json.loads(os.environ["GOOGLE_APPLICATION_CREDENTIALS_JSON"])
@@ -25,7 +25,7 @@ if "GOOGLE_APPLICATION_CREDENTIALS_JSON" in os.environ:
 else:
     print("GOOGLE_APPLICATION_CREDENTIALS_JSON not found.")
 
-# Initialize Dialogflow
+
 try:
     project_id = "questionbot-lbwk"   
     credentials = service_account.Credentials.from_service_account_file("service-account.json")
@@ -34,13 +34,11 @@ except Exception as e:
     print(f"Dialogflow Client Error: {e}")
     session_client = None
 
-# Initialize Gemini AI
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 try:
-    # Using gemini-1.5-flash as 2.5 is not a standard release yet
-    model = genai.GenerativeModel("gemini-1.5-flash") 
+    model = genai.GenerativeModel("gemini-3-flash")
 except Exception as e:
     print("Error initializing Gemini:", e)
     model = None
@@ -162,26 +160,35 @@ def api_chat():
     except Exception as e:
         return jsonify({"response": f"AI Error: {str(e)}"})
 
-
 @app.route("/generate-questions", methods=["POST"])
 def generate_questions():
     data = request.get_json()
     topic = data.get("topic")
+    count = data.get("count", 5)
     
+    if not topic:
+        return jsonify({"error": "Topic is required"}), 400
+
     try:
-        prompt = f"Generate 5 MCQs on {topic}. Return ONLY raw JSON with keys: questions, options, answer, explanation. No markdown."
+        # We tell the AI to be extremely strict with the format
+        prompt = f"Generate {count} MCQs on the topic '{topic}'. Return ONLY raw JSON with keys: questions, options, answer, explanation. Do not include markdown or extra text."
         response = model.generate_content(prompt)
-        
-        # This part removes any extra text the AI might have added
         text = response.text.strip()
-        json_start = text.find("{")
-        json_end = text.rfind("}") + 1
-        clean_json = text[json_start:json_end]
+
+        # Magic Fix: This finds the FIRST { and LAST } to extract only the JSON data
+        start = text.find("{")
+        end = text.rfind("}") + 1
+        if start == -1 or end == 0:
+            raise ValueError("AI did not return valid JSON")
+            
+        clean_json = text[start:end]
+        quiz_data = json.loads(clean_json)
         
-        return jsonify(json.loads(clean_json))
+        return jsonify(quiz_data)
+        
     except Exception as e:
-        print(f"Quiz Error: {e}")
-        return jsonify({"error": "AI could not format the quiz. Please try again."}), 500
+        print(f"Quiz Error Details: {str(e)}") # This will show up in your Render logs
+        return jsonify({"error": f"Internal Server Error: {str(e)}"}), 500
 
 # Route for Interactive Session-based Chat
 @app.route("/interactive-chat", methods=["POST"])
