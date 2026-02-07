@@ -165,7 +165,6 @@ def api_chat():
 @app.route("/generate-questions", methods=["POST"])
 def generate_questions():
     data = request.get_json()
-
     topic = data.get("topic")
     count = int(data.get("count", 5))
     difficulty = data.get("difficulty", "medium")
@@ -173,40 +172,41 @@ def generate_questions():
     if not topic:
         return jsonify({"error": "Topic is required"}), 400
 
+    # We tell the AI to ONLY give us the code, no chatting!
     prompt = f"""
-Generate {count} multiple-choice questions on the topic "{topic}".
-Difficulty level: {difficulty}.
-
-Each question must include:
-- question
-- 4 options
-- correct answer
-- short explanation
-
-Return STRICT JSON in this format:
-{{
-  "questions": [
+    Generate {count} multiple-choice questions on the topic "{topic}".
+    Difficulty level: {difficulty}.
+    Return ONLY a raw JSON object. Do not include markdown formatting or backticks.
+    Format:
     {{
-      "question": "...",
-      "options": ["A", "B", "C", "D"],
-      "answer": "A",
-      "explanation": "..."
+      "questions": [
+        {{
+          "question": "...",
+          "options": ["A", "B", "C", "D"],
+          "answer": "A",
+          "explanation": "..."
+        }}
+      ]
     }}
-  ]
-}}
-"""
+    """
 
     try:
         response = model.generate_content(prompt)
         text = response.text.strip()
 
-        # Extract JSON safely
-        json_text = text[text.find("{"): text.rfind("}") + 1]
-        quiz_data = json.loads(json_text)
+        # Safety Net: This removes backticks (```json) if the AI adds them
+        clean_json = re.sub(r'```json|```', '', text).strip()
+        
+        # Extract just the part between the first { and the last }
+        start = clean_json.find("{")
+        end = clean_json.rfind("}") + 1
+        final_json = clean_json[start:end]
 
+        quiz_data = json.loads(final_json)
         return jsonify(quiz_data)
 
     except Exception as e:
+        print(f"Quiz Generation Error: {e}") # This shows the error in Render logs
         return jsonify({"error": str(e)}), 500
 # Route for Interactive Session-based Chat
 @app.route("/interactive-chat", methods=["POST"])
