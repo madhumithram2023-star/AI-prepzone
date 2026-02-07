@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Prepzone - Quiz Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <main class="quiz-container">
+    <div class="quiz-form-card">
+      <div class="icon-box">
+        <i class="fas fa-vial"></i>
+      </div>
+      <h1 class="main-title">Quiz Generator</h1>
+      <p class="subtitle">
+        Generate custom, multi-type quizzes instantly from any topic or pasted
+        notes. Perfect for quick revision and targeted practice.
+      </p>
+
+            <form id="quiz-params-form" class="quiz-form" autocomplete="off">
+        
+                  <div class="form-group">
+          <label for="topic-title">Quiz Topic</label>
+          <input
+            type="text"
+            id="topic-title"
+            name="topic-title"
+            placeholder="e.g., Photosynthesis & Cellular Respiration"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="num-questions">Number of Questions</label>
+          <input
+            type="number"
+            id="num-questions"
+            name="num-questions"
+            min="1"
+            max="50"
+            value="10"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="difficulty">Difficulty Level</label>
+          <select id="difficulty" name="difficulty" required>
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        
+                <button type="submit" class="btn btn-primary submit-btn" id="startQuizBtn">
+            Start Quiz <i class="fas fa-arrow-right"></i>
+        </button>
+        
+                <div id="loadingIndicator" style="display:none; text-align:center; padding: 15px;">
+            <i class="fas fa-sync-alt fa-spin"></i> Generating Quiz...
+        </div>
+
+      </form>
+          </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+year,examtype,csv_id,sub,question,topic,type,difficulty,repeatation
+2023,CAT1,1,Computer Networks,"Identify one or more layers of the OSI model that carry out the following responsibilities and explain them in detail:     i) Transmission of bit stream across physical medium.
+ii) Defines Frames                                                                            iii)Error correction and retransmission.                                         iv) Reliable Process-to-process message delivery.
+v) Route selection.
+vi) Provides user services such as e-mail and file transfer.",OSI MODEL,THEORY,EASY,1
+2023,CAT1,2,Computer Networks, Compare and contrast star and mesh topologies using suitable examples.,TOPOLOGY,THEORY,MODERATE,1
+2023,CAT1,3,Computer Networks,"Assume that processing delay, queuing delay and control overhead-bits are ignored. Consider the message size as 30,000 bits, the propagation time is 10ms per hop, packet length is 1000 bits, transmission rate per hop is 10000 bps and call set-up time is 2ms.Find the total time for both the circuit and packet switching networks when number of intermediate nodes as (i) 2, (ii) 5, (iii) 10, (iv) 50, (v) 100. Also, comment on the network performance in terms of the total delay in both the switching networks when the number of intermediate nodes increases",CIRCUIT AND PACKET SWITCHING,NUMERICAL,HARD,1
+2023,CAT1,4,Computer Networks,"Consider an Internet application running on two Internet hosts, Host1 and Host2, which are communicating using a path through router R. Assume that the average service time (queuing and processing delay) at R is 15 ms, packets are 6,000 bits long and the propagation delay between Hostl and Host2 is 250ms. Also, ignore the control overhead.",CIRCUIT AND PACKET SWITCHING,NUMERICAL,EASY,1
+2024,CAT1,5,Artificial Intelligence,"Design PEAS for the following artificial intelligent agents.
+i) Taxi driver agent 
+ii) Automated robot in a manufacturing plant.          
+iii) Playing soccer 
+iv) Bidding an item on an auction 
+v) Shopping for used AI books on the Internet ",PEAS,THEORY,HARD,1
+2024,CAT1,6,Artificial Intelligence,"Consider the project developed by Google, codenamed Waymo. Waymo has 
+successfully deployed self-driving cars with advanced sensors and implemented 
+AI-based model algorithms in their decision-making process. These 
+autonomous vehicles navigate the roads, making decisions based on percept 
+history and real-time sensory input Ã¯Â¿Â½ the ability to make informed decisions 
+based on historical data and real-time perceptual input received from the 
+environments. Identify the most suitable model and explain how it fits this 
+scenario where a decision has been made based on the perception of events that 
+happened. ",AI MODEL,ANALYSIS,HARD,1
+2024,CAT1,7,Artificial Intelligence,"a) Suppose a genetic algorithm uses chromosomes of the form x = abcdefgh 
+with a fixed length of eight genes. Each gene can be any digit between 0 
+and 9. Let the fitness of individual x be calculated as: 
+ f(x)=(a+b)-(c+d)+(e+f)-(g+h)
+and let the initial population consist of four individuals with the following 
+chromosomes: 
+x1 = 6 5 4 1 3 5 3 2,
+x2 = 8 7 1 2 6 6 0 1 ,
+x3 = 2 3 9 2 1 2 8 5 ,
+x4 = 4 1 8 5 2 0 9 4 
+ 
+Evaluate each individual's fitness, showing all your workings and arrange 
+them in order with the fittest first and the least fit last.
+b) With a neat sketch of the hill-climbing algorithm's state-space landscape, 
+explain why the hill-climbing search gets struck. List the variants of the hill 
+climbing algorithm and describe how they overcome this problem",GENETIC ALGORITHM,NUMERICAL,MODERATE,2
+2024,FAT,8,Artificial Intelligence,"You are given with five different tasks like  
+(i) Crossword puzzle 
+(ii) N Queens Problem
+(iii)  Tower of Hanoi 
+(iv) Ludo 
+List the PEAS description and the properties for the given tasks to their 
+environment characteristics with suitable justification. ",PEAS,THEORY,HARD,1
+2024,CAT1,9,Artificial Intelligence,"A taxi company wants to optimize its drivers' routes to reduce fuel 
+consumption, minimize travel time, and enhance customer satisfaction. List 
+the challenges and plans in developing an AI system for a real-time route 
+optimization system that assists drivers in selecting the most efficient routes 
+while considering dynamic factors like traffic, road conditions, toll plazas 
+and weather conditions? Discuss with diagram the most suitable type of 
+agent that can be used for this type of system. ",AI AGENT,ANALYSIS,HARD,1
+2024,CAT1,10,Artificial Intelligence,"Show that hill-climbing approach suffers from local optima in solving a 
+problem. Use a global heuristic function to solve the same problem to reach 
+the goal state.",HILL CLIMBING,THEORY,EASY,1
+2024,CAT2,11,Artificial Intelligence,"a) Describe different approaches to Artificial Intelligence. List the timeline of the evolution of artificial intelligence and briefly describe each period/breakthrough.
+b) Consider an artificial agent learning to play chess, where the agent learns the game's rules and optimal moves through multiple plays and feedback from critics. Which type of agent would be most suitable for a chess-playing agent? Justify your answer. Also, briefly describe the agent architecture with a suitable diagram.",AI AGENT,THEORY,EASY,1
+2024,CAT1,12,Artificial Intelligence,"Describe the task environments and their characteristics for the following agents.
+i. Rental Bike/Car booking
+ii. Cooking Robot
+iii. Grocery Delivery
+iv. Playing Chess",PEAS,THEORY,EASY,1
+2024,CAT1,13,Artificial Intelligence,Explain each step of the genetic algorithm with correct terminology in detail using the eight-queen problem and appropriate examples. Calculations must be provided along with the steps when necessary.,GENETIC ALGORITHM,THEORY,EASY,1
+2024,CAT2,14,Artificial Intelligence,"Illustrate the PEAS components and classify the environment type for
+the provided scenarios.
+a) Customer browsing an online shopping website
+b) Chatbot customer service
+c) Home automation system",PEAS,THEORY,EASY,1
+2024,CAT2,15,Artificial Intelligence,"a) Consider a scenario where a bank wants to enhance its fraud
+detection system. Justify how AI can identify fraudulent transactions,
+prevent money laundering and improve risk assessment.
+b) Illustrate how the subfield of AI Expert system works and where is it
+typically applied?",AI AGENT,ANALYSIS,EASY,1
+2024,CAT1,16,Artificial Intelligence,"A manufacturing plant aims to create an optimal production schedule
+that reduces production time and efficiently utilizes resources. Discuss
+how hill climbing could be applied to determine a feasible schedule,
+highlighting potential obstacles. Also, illustrate how simulated
+annealing can be used to overcome suboptimal solutions and achieve a
+better schedule.",SIMULATED ANNEALING,THEORY,EASY,1
+2023,CAT2,17,Artificial Intelligence,"a) Explain in detail about any 10 applications of AI.
+b) Explain the following (1) Model based Agent (2) Goal based agent",AI AGENT,THEORY ,HARD,1
+2023,CAT1,18,Artificial Intelligence,"a) Discuss the properties of task environment.
+b) For each of the following activities, give a PEAS description of the task environment.
+Ã¯Â¿Â½ Playing soccer.
+Ã¯Â¿Â½ Exploring the subsurface oceans of Titan.
+Ã¯Â¿Â½ Shopping for used AI books on the Internet.",PEAS,THEORY,MODERATE,1
+2025,CAT1,19,Artificial Intelligence,"An Al agent is supposed to manage the energy consumption of a smart home. The agent's objective is to minimize the electricity bill while ensuring the residents' comfort. It has access to weather forecasts, real-time electricity pricing from the grid, and sensors in each room (temperature, occupancy). It can control the heating, ventilation, and air conditioning (HVAC) system, the smart lighting, and high-consumption appliances like the dishwasher and washing machine.
+What is the correct PEAS categorization for this agent? Classify this task environment according to the following properties- Deterministic vs. Stochastic, Static vs. Dynamic, and Episodic vs. Sequential, and briefly justify your choices. What strategy should the agent adopt to effectively balance cost minimization with maintaining comfort?",PEAS ,ANALYSIS,HARD,2
+2024,FAT,20,Computer Networks,"A company wants to design a network for its new office building that spans four floors. The IT team needs to connect various departments such as finance, HR, and engineering located on different floors. The network must support high-speed internet access, secure communications, and the ability to handle large amounts of data being transferred within the office.
+The following requirements must be met.
+a) Each department should have its own dedicated segment to reduce traffic congestion.
+b) The network should be scalable to accommodate future expansions.
+c) Security is important, so there must be provisions for isolating department and preventing unauthorized access to data.
+d) A wireless network should cover common areas like the lobby and cafeteria.",VLAN ,TECHNICAL,HARD,2
+2024,FAT,21,Computer Networks,") Stored on a flash memory device is a 200 megabyte (MB) message to be transmitted by an e-mail from one server to another, passing three nodes of a connectionless network. This network forces packets to be of size 10KB, excluding a packet header of 40 bytes. Nodes are 400 miles apart, and servers are 50 miles away from their corresponding nodes. All transmission links are of type 100Mb/s. The processing time at each node is 0.2 seconds.
+
+i. Find the propagation delays per packet between a server and a node and [3] between nodes.
+
+ii. Find the total time required to send this message.",DELAY AND THROUGHPUT ANALYSIS,NUMERICAL,HARD,1
+2024,FAT,22,Computer Networks,Compare and contrast Circuit Switching and packet Switching,CIRCUIT AND PACKET SWITCHING,THEORY,EASY,1
+2023,FAT,22,Computer Networks, A defence organization is planning to have the network built for their newly constructed office. There are 3 scientists working on confidential projects. Each scientist has a team of 5 engineers. Sketch a suitable topology with justification.,TOPOLOGY,ANALYSIS,HARD,1
+2023,FAT,23,Computer Networks,"A company is hiring freshers to work on the Application layer and Transport layer. Identify any 4 protocols with their purpose, which the candidate has to be familiar to be eligible for the job.",PROTOCOL,ANALYSIS,MODERATE,1
+2023,FAT,24,Computer Networks,"a) In a wireless communication system, a sensor node is transmitting temperature data of 7 bits to a base station. To ensure reliable transmission, Hamming code with even parity is applied to each temperature data. The data received on the receiving end is 01010111101. Identify any error and mention the steps to correct it.",ERROR DETECTION AND CORRECTION / HAMMING CODES,NUMERICAL,HARD,1
+2023,FAT,25,Computer Networks,"a) The data captured from Wireshark tool is given below. Show the IPv4 header format with values given.
+DX4500004da548000080110000c0a82b7fc0a82b01
+b) Analyse if the data is fragmented or corrupted with justification.",IP ADDRESS,NUMERICAL,HARD,1
+2023,FAT,26,Computer Networks,"A network uses the 172.12.0.0 class B address. There is a requirement to support 459 hosts per subnet, while accommodating the maximum number of subnets.
+Construct the subnet mask and the IP layout for 4 valid subnets with details of the first address, range of address and the broadcast address.",SUBNET MASK,NUMERICAL,HARD,1
+2023,FAT,27,Computer Networks,Differentiate closed loop and open loop congestion control by quoting 2 mechanisms from each method.,CONGESTION CONTROL.,THEORY,MODERATE,1
+2024,CAT2,28,Computer Networks,"a) Assuming N stations are present in pure Aloha Network, having a bandwidth of
+56Kb/Sec find the value of N, assuming that each station sends data of size 1000
+bits at an average interval of 100 sec.
+b) X is working as a Business Development Lead in a leading MNC and keeps
+traveling frequently. X is also given the task to attend online meetings even in transit.
+An urgent meet was called for when X was about to board his flight and there was
+a poor network in his mobile. X contacted the helpdesk requesting for internet
+connection. Which IEEE standard would help to connect to the airlineÂs internet
+service? Enumerate the architecture involved in connecting to the airlineÂs internet service.",WIRELESS NETWORKS / IEEE 802.11 STANDARDS,NUMERICAL,HARD,1
+2024,CAT2,29,Computer Networks,"a. Consider an IP packet with a length 4500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded to an IPV4 router that supports a Maximum Transmission unit MTU of 600 bytes. Assume that the length of the header in all the outgoing fragments of this packet is 20 bytes. Assume that the
+fragmentation offset value store in the first fragment is 0. What is the fragmentation offset stored in the third fragment?
+b. A CEO of a company needs a privacy in maintaining the number of hosts for his company to the public network with a single IP address. What is the networking technology required for the above and explain the same?",IP FRAGMENTAION,NUMERICAL,MODERATE,1
+2024,CAT2,30,Computer Networks," Draw the sender and receiver windows for a system using Selective Repeat
+ARQ (3-bits for sequence number), given the following:
+i) Frame 0 is sent; frame 0 is acknowledged.
+ii) Frame 1 and 2 are sent; frames 1 and 2 are acknowledged.
+iii) Frame 3, 4 and 5 are sent; frame 4 is acknowledged; timer for frame 5
+expires.
+iv) Frame 5, 6 and 7 are sent; frames 4 through 7 are acknowledged",SLIDING WINDOW PROTOCOLS,NUMERICAL,EASY,1
+2024,CAT1,31,Database Management Systems,What is Data Abstraction? Explain about different views of data,DATA ABSTRACTION,THEORY,MODERATE,1
+2024,CAT1,32,Database Management Systems,List the types of Database users and discuss the roles of DBA,ROLES OF DBA,THEORY,MODERATE,1
+2024,CAT1,33,Database Management Systems,"Given R(A,B,C,D,E) with the set of FDs, F{AB?CD, BC? D, D?E, C? E}
+(i) Find candidate keys of R
+(ii)What is the normal form of R?                                   ",KEYS,NUMERICAL,HARD,1
+2024,FAT,34,Database Management Systems,"Design an EER diagram to capture the requirements of an e-commerce platform that sells products online. The platform should allow users to browse products, add them to their shopping carts, checkout, and track their orders. Every product has a unique ID, name, description, price, quantity in stock, and category. Categories represent different product groups (e.g., electronics, clothing, books). Products can be categorized into different types (e.g., books, electronics, and clothing). Every customer has a unique ID, name, email, address, and shipping information. Each order has a unique ID, customer ID, order date, shipping address, and total amount. Each order can have multiple items. An order item specifies the product ID, quantity, and price. Each order has associated payment information, including payment method, transaction ID, and payment status. Customers can leave reviews for products, including a rating and a text comment. The platform can offer promotions and discounts on products.
+State any assumptions you have that affects your design. Clearly indicate primary keys and the cardinalities with which an entity participates in a relationship with a pair of (minimum, maximum) value.",ER DIAGRAM,NUMERICAL,HARD,1
+2024,FAT,35,Database Management Systems,"Define conflict serializable, recoverable, cascadeless, and strict schedules.
+For each of the following schedules, state which of the above mentioned properties
+hold. Justify your answer.
+a) S: R1(X), W2(X), W1(X), A2, C1
+b) S2: R1(X), W2(X), W1(X), C2, C1
+c)S3: R1(X), R2(X), W1(X), C1, W2(X), C2
+d) S4:  W 1(X), R2(X), W1(X) ,C2,A1
+e) S5: W1(X), R2(Y)C1, C2
+f) S6:  R1(X), R2(X),C1,W2(X),C2",CONFLICT SERIALIZABLE,NUMERICAL,HARD,1
+2024,FAT,36,Database Management Systems,"Given a large-scale e-commerce application that requires high availability, low latency, and the ability to handle massive amounts of transactional data, which NoSQL database types would be most suitable? Justify your answer with specific scenarios to illustrate the key considerations. Discuss why other NoSQL types might not be suitable.",NOSQL DATABASE,THEORY,HARD,1
+2023,FAT,40,Database Management Systems,"Consider a B+-tree of order three. Show the results of entering one by one the keys that are three letter strings: (era, ban, bat, kin, day, log, rye, max, won, ace, ado, bug, cop, gas, let, fax) (in that order) to an initially empty 8+-tree. Assume that you use lexicographic ordering to compare the strings. Show the state of the tree after every 4 insertions.",B+ TREE,NUMERICAL,HARD,1
+2023,FAT,41,Database Management Systems,"A relation R has attributes A, B, C, D, E, and satisfies the following FDs:
+ABC
+BD
+CDE
+EA
+a) Show that (A, B, C) and (A, D, E) are a lossless decomposition of R.
+b) Show that (A, B, C) and (C, D, E) are not a lossless decomposition of R.
+c) Show that (A, B, C) and (A, D, E) are not a dependency preserving decomposition of R.",FUNCTIONAL DEPENDENCIES,NUMERICAL,HARD,1
+2025,CAT2,42,Database Management Systems,"
+1. Given a relation schema R (ABCDE) with a set of FDs, let F (ABC, BCA, BCDE, EC). 
+(i) Is the given relation present in the BCNF or not? If not then decompose into BCNF.
+
+(ii) Is that the decomposed relation preserving the functional dependencies? If no then list the functional dependencies that are not preserved and state the reason.
+",FUNCTIONAL DEPENDENCIES,NUMERICAL,HARD,1
+2025,CAT2,43,Database Management Systems,"A sequential file is ordered on EmployeeID. The file has 1,00,000 records, block size 1,000 bytes, record size 100 bytes. (i)
+Determine the number of records that can be stored in a single block and calculate the total number of blocks required to store the entire file of records.
+(ii) If 2,000 new employee records are inserted randomly, estimate the numbers of block splits or reorganizations are expected?
+(iii) Suppose a primary index is built with one index entry per block. Compute the number of index blocks required. Assume index entry size 10 bytes for key and 4 bytes for pointer.
+(iv) Suggest an alternative file organization to reduce insertion cost, and justify the answer.",BLOCK MEMORY,NUMERICAL,HARD,1
+2025,CAT2,44,Database Management Systems,"Consider the following schedules for an e-commerce website. The
+transactions indicate the consumers performing one of the following
+actions: Cart Service (adding products to the cart), Purchase service,
+Payment service and shipping service. The schedules S1 and S2 show
+the different ways these transactions are interleaved. Of these
+schedules, identify the schedule that can be called an equivalent to a
+serial schedule of transactions. Explain and justify your answer.
+S1: R2(X)R3(X)W3(X)R1(X)W1(X)R2(Y)W2(Y)R2(Z)R4(Y)R4(X)
+S2-> R1(X)W1(X)R4(Z)W4(X)R2(X)R3(Y)R3(Z)W3(Z)R1(Z)W2(X)",CONFLICT SERIALIZABLE,NUMERICAL,HARD,1
+2025,CAT2,45,Database Management Systems,"Construct a B-tree for the following set of values (2, 3, 5, 7, 11, 17, 19, 23, 29, and 31). Assume that the tree is initially empty and values are inserted in ascending order.
+(i) Construct B+-trees for the cases where the number m of pointers that will fit a node is 4
+(ii) Shows the form of the B-tree after each operation of the sequence Insert 9, 10,
+(iii)3) Shows the form of the B-tree after each operation of the sequence Delete 19, 23;",B+ TREE,NUMERICAL,EASY,1
+2025,CAT2,46,Database Management Systems,"Consider the transactions T1, T2, and 13 and the schedules SI and S2 given below.
+T1: rl(A); r1(C); w1(A); w1(C)
+T2: 12(B); r2(C); w2(C)
+T3: r3(B); 13(A); w3(B)
+S1: r1(A); r3(B); 13(A); r2(B); r2(C); w3(B); w2(C); r1(C); w1(A); w1(C)
+S2: r 1(A); r3(B); r2(B); r3(A); r1(C); r2(C); w3(B); w1(A); w2(C); w1(C)
+Check whether the given Schedules S1 or S2 are conflict serializable or not?
+Give justification to your answer with neat explanation.",CONFLICT SERIALIZABLE,NUMERICAL,EASY,1
+2024,CAT2,47,Operating Systems,"Explain the ProducerÂConsumer problem and implement a solution using semaphores or monitors.
+Discuss how deadlock can occur if semaphore usage is incorrect.",SEMAPHORE,CONCEPTUAL,EASY,1
+2024,FAT,48,Operating Systems,"Differentiate between internal and external fragmentation.
+Given a memory of 100 MB divided into partitions of 20 MB each, and processes requiring 15, 25, 10, and 30 MB respectively Â calculate wasted memory for First Fit, Best Fit, and Worst Fit strategies.",MEMORY PARTITION ,NUMERICAL,EASY,1
+2025,CAT1,49,Operating Systems,"What is demand paging?
+Given the reference string 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5 and 3 page frames, compute the number of page faults using FIFO and LRU algorithms.",PAGING,NUMERICAL,EASY,1
+2024,FAT,50,Operating Systems,"Describe different disk scheduling algorithms (FCFS, SSTF, SCAN, C-SCAN).
+Given the disk queue request sequence: 82, 170, 43, 140, 24, 16, 190 with head at 50, calculate the total seek time for each algorithm assuming a seek rate of 1 ms per track.",DISK SCHEDULING,NUMERICAL,HARD,1
+2023,CAT2,51,Operating Systems,"Explain how system calls act as the interface between user programs and the OS kernel.
+Write a simple C program to demonstrate the use of fork() and exec() system calls, and describe what happens in memory during their execution.",SYSTEM CALLS ,THEORY,EASY,1
+2025,FAT,52,Operating Systems,"A system has 1,000 instructions per second.
+A memory access takes 1 ?s. A page fault takes 5 ms to handle.
+If 0.1% of memory accesses cause page faults, compute the Effective Access Time (EAT).
+Then discuss how TLB (Translation Lookaside Buffer) improves this performance if TLB hit ratio = 90% and TLB access time = 0.1 ?s.",DEMAND PAGING,NUMERICAL,HARD,1
+2023,CAT2,53,Operating Systems,"A disk rotates at 7200 RPM and has 200 tracks. Average seek time is 8 ms.
+If a read request arrives for track 150 while the head is at track 50, calculate:
+
+1)Seek time
+
+2)Rotational latency
+
+Total average access time
+Compare results for SSTF and SCAN assuming uniform request distribution.",DISK SCHEDULING AND ROTATIONAL LATENCY,CONCEPTUAL,HARD,1
+2024,CAT2,54,Operating Systems,"A system has 4 page frames and uses the Optimal Page Replacement algorithm.
+Given the reference string:
+7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2
+Compute the number of page faults.
+Then compare results with LRU and Clock (Second Chance) algorithms.",PAGE REPLACEMENT,NUMERICAL,HARD,1
+2023,CAT2,55,Operating Systems,"Modern multicore kernels (like Linux) use spinlocks and mutexes differently in kernel-space.
+
+(a) Explain why spinlocks are preferred in certain kernel contexts, and why they must not be held during sleep or I/O operations.
+(b) Given a 16-core system running critical sections protected by a single spinlock, each section taking 1 ?s, and a contention rate of 70%, estimate:
+
+The expected waiting time per core, and
+
+How performance scales if contention increases to 90%.
+
+(c) Propose one design to reduce contention (e.g., using lock striping, RCU, or per-CPU data).",KERNEL ,CONCEPTUAL AND NUMERICAL,HARD,1
+2022,FAT,56,Operating Systems,"n a virtualized system (using a Type-1 hypervisor), guest OSes believe they manage their own page tables, but the hypervisor maintains shadow page tables.
+
+(a) Explain how shadow page tables work and the role of Extended Page Tables (EPT/NPT) in hardware-assisted virtualization.
+(b) Derive the effective memory access time when:
+
+Each memory access requires a guest page table lookup (2 memory references)
+
+Each guest lookup triggers a host-level page translation (2 more memory references)
+
+TLB hit ratio = 95%, TLB access time = 5 ns, and memory access = 100 ns
+
+(c) Compare this to nested paging performance and suggest optimizations used in modern CPUs.",VIRTUALISATION,NUMERICAL,HARD,1
+2024,FAT,57,Operating Systems,"a distributed database system with three sites (S1, S2, S3), processes at each site can request resources at others.
+Each site maintains its own Wait-For Graph (WFG), and periodically exchanges partial WFGs to detect cycles.
+
+(a) Explain how distributed deadlock detection using edge-chasing works.
+(b) Show an example where a false deadlock is detected due to message delay.
+(c) Propose a timestamp-based resolution algorithm to avoid false positives.
+(d) Analyze the message complexity of your solution in terms of number of sites (N) and edges (E).",DEADLOCK,NUMERICAL,HARD,1
+2025,CAT1,58,Operating Systems,"Modern operating systems like seL4 and Capsicum implement capability-based security rather than traditional ACLs.
+
+(a) Explain how capabilities enforce fine-grained access control compared to ACLs.
+(b) Design a capability revocation protocol that allows secure, immediate revocation of privileges without halting processes.
+(c) Prove that your mechanism prevents confused deputy attacks.
+(d) Discuss the trade-off between flexibility and performance in capability-based systems.",OS SECURITY,CONCEPTUAL AND NUMERICAL,HARD,1
+2024,FAT,59,Operating Systems,"ompare monolithic, microkernel, and hybrid kernel architectures.
+Design a microkernel message-passing structure for handling inter-process communication (IPC) and analyze its performance overhead versus a system call trap.",KERNEL ,THEORY,HARD,1
+2025,CAT2,60,Operating Systems,"In a SMP (Symmetric Multiprocessing) system with 4 CPUs, 10 tasks are ready, each with known burst times.
+Explain how load balancing is achieved using work stealing and processor affinity.
+Analyze what happens if task migration cost = 2 ms and average task execution time = 5 ms.",MULTI PROCESSOR SCHEDULING,NUMERICAL,HARD,1
+2023,CAT1,61,Cloud Services,"Explain the lifecycle of an EC2 instance.
+How does AWS handle instance states like pending, running, stopping, stopped, and terminated?
+Also, differentiate between EBS-backed and Instance-store-backed instances.",EC2 INSTANCES,THEORY,HARD,1
+2024,CAT1,62,Cloud Services,"You have a web application hosted on EC2 instances behind an Application Load Balancer (ALB).
+Describe how Auto Scaling Groups (ASG) maintain fault tolerance and high availability.
+How would you configure scaling policies for unpredictable traffic spikes?",AUTO SCALING AND LOAD BALANCING,CONCEPTUAL,HARD,1
+2025,CAT1,63,Cloud Services,"Explain how AWS Identity and Access Management (IAM) enforces principle of least privilege.
+Given a user needs read-only access to S3 buckets and EC2 instance metadata, write a JSON IAM policy that allows this.",IAM SECURITY,CONCEPTUAL,MODERATE,1
+2024,CAT1,64,Cloud Services,"Explain the difference between read-after-write consistency and eventual consistency in Amazon S3.
+List and compare at least four S3 Storage Classes (e.g., Standard, IA, Glacier, One Zone-IA) in terms of durability, availability, and cost.",S3 BUCKET,THEORY,MODERATE,1
+2023,CAT1,65,Cloud Services,"Design a VPC with CIDR block 10.0.0.0/16.
+You need:
+
+2 public subnets
+
+2 private subnets
+Each in a different Availability Zone.
+Draw or describe the subnet IP range allocation and routing table setup to allow NAT Gateway access for private instances.",VPC SUBNET,NUMERICAL,MODERATE,1
+2023,CAT1,66,Cloud Services,"Compare AWS Lambda and EC2 in terms of pricing model, scalability, startup latency, and control over runtime.
+Under what circumstances is Lambda a poor choice?",LAMBDA AND EC2,THEORY,MODERATE,1
+2024,CAT2,67,Cloud Services,"Explain how Elastic IP addresses work in EC2.
+What happens when you associate an Elastic IP with a stopped instance and then start a new one with the same IP?",EC2 INSTANCES,THEORY,MODERATE,1
+2025,FAT,68,Cloud Services,"You have an EC2 instance that loses its data every time you stop it.
+What kind of storage is it using, and how can you prevent this behavior?",EC2 INSTANCES,THEORY,MODERATE,1
+2023,CAT2,69,Cloud Services,"Explain the differences between Application Load Balancer (ALB), Network Load Balancer (NLB), and Classic Load Balancer (CLB).
+Which would you use for WebSocket connections and why?",LOAD BALANCER,THEORY,MODERATE,1
+2022,CAT1,70,Cloud Services,"In an Auto Scaling Group, you set the desired capacity to 4.
+If one instance becomes unhealthy, what happens next?
+How does AWS determine Âunhealthy,Â and how is it replaced?",LOAD BALANCER,THEORY,MODERATE,1
+2024,CAT1,71,Cloud Services,"A developer accidentally granted s3:* permission to all users.
+Explain the risk, and how would you use IAM Access Analyzer to detect and fix such over-permissive policies?",IAM SECURITY,CONCEPTUAL,HARD,1
+2024,FAT,72,Cloud Services,"Differentiate between S3 Standard, S3 Intelligent-Tiering, S3 Glacier Instant Retrieval, and S3 Glacier Deep Archive in terms of use cases and retrieval time.",S3 GLACIER,THEORY,HARD,1
+2024,FAT,73,Cloud Services,"You have two EC2 instances in different VPCs that need to communicate securely.
+Explain VPC Peering and Transit Gateway.
+Which is better for many-to-many communication and why?",VPC SUBNET,THEORY,HARD,1
+2025,CAT1,74,Cloud Services,"Differentiate between Simple, Weighted, Latency-based, and Geolocation routing policies in Route 53.
+Give one example use case for each.",ROUTE 53,CONCEPTUAL,MODERATE,1
+2024,CAT2,75,Cloud Services,"Explain the Multi-AZ deployment in Amazon RDS.
+How does it ensure high availability and automatic failover?
+What happens internally when the primary instance fails?",MULTI AZ ,THEORY,HARD,1
+2024,CAT1,76,Cloud Services,"You have an RDS MySQL instance running in a single AZ.
+If the AZ goes down, what happens to your database?
+What would you change to make your RDS setup more fault-tolerant?",AMAZON RDS,CONCEPTUAL,HARD,1
+2025,CAT2,77,Cloud Services,"Describe the provisioned throughput and on-demand capacity modes in DynamoDB.
+What happens if a table in provisioned mode receives more requests than the defined write capacity units (WCUs)?",DYANAMODB,THEORY,HARD,1
+2022,CAT2,78,Data Structures and Algorithm,What is the difference between stack and queue in terms of data access order?,STACK VS QUEUE,CONCEPTUAL,EASY,1
+2025,FAT,79,Data Structures and Algorithm,Define hashing in one or two lines.,HASHING,CONCEPTUAL,EASY,1
+2023,FAT,80,Data Structures and Algorithm,What is a binary tree?,BINARY TREE,CONCEPTUAL,EASY,1
+2022,CAT1,81,Data Structures and Algorithm,Explain how insertion happens in a binary search tree. Describe comparison steps and subtree placement.,BST INSERTION,THEORY,MODERATE,1
+2021,CAT1,82,Data Structures and Algorithm,Describe the working of selection sort. Explain how the smallest element is selected in each pass.,SORTING,THEORY,MODERATE,1
+2022,CAT2,83,Data Structures and Algorithm,Explain how adjacency list and adjacency matrix differ in graph representation and compare space complexity.,GRAPH REPRESENTATION,CONCEPTUAL,MODERATE,1
+2022,CAT1,84,Data Structures and Algorithm,Describe the process of deleting a node in a linked list when only pointer to that node is given.,LINKED LIST,ANALYSIS BASED,MODERATE,1
+2025,CAT1,85,Data Structures and Algorithm,Explain how BFS finds shortest path in an unweighted graph. Mention queue usage and layer exploration.,BFS,THEORY,MODERATE,1
+2022,CAT2,86,Data Structures and Algorithm,Describe post-order traversal with example. Show how left-right-root evaluation happens.,TREE TRAVERSAL,THEORY,MODERATE,1
+2022,FAT,87,Data Structures and Algorithm,Explain rehashing and why it is required in dynamic hash tables.,HASHING,ANALYSIS BASED,MODERATE,1
+2021,FAT,88,Data Structures and Algorithm,Describe quicksort partitioning process and how pivot selection affects efficiency.,QUICKSORT,ANALYSIS BASED,MODERATE,1
+2022,FAT,89,Data Structures and Algorithm,"An online food delivery platform stores restaurant distances in a graph. The system must recommend nearest available outlet quickly. Propose a graph traversal or shortest path strategy, explain time complexity, and evaluate performance if number of restaurants increases drastically.",SHORTEST PATH,ANALYSIS BASED,HARD,1
+2024,CAT2,90,Data Structures and Algorithm,"A media streaming service caches frequently accessed movies to improve performance. Explain how heap data structure can be used to maintain a priority queue of most-watched items, describe insertion and deletion complexity, and analyze behavior under heavy load.",HEAP,ANALYSIS BASED,HARD,1
+2022,CAT2,91,Data Structures and Algorithm,"A navigation system tracks city routes as weighted graphs. Explain how Dijkstraâs algorithm would determine shortest path, discuss when Bellman-Ford is preferred, and analyze worst-case runtime in large city networks.",GRAPH ALGORITHMS,ANALYSIS BASED,HARD,1
+2023,CAT2,92,Data Structures and Algorithm,A cloud storage platform balances search requests across distributed servers. Explain how AVL tree rotations help maintain search efficiency. Discuss what occurs if balancing operations are skipped and tree height increases significantly.,AVL TREE,ANALYSIS BASED,HARD,1
+2024,CAT1,93,Computer architecture and Design,What is the function of the Arithmetic Logic Unit (ALU)?,ALU,CONCEPTUAL,EASY,1
+2025,FAT,94,Computer architecture and Design,Define register in computer architecture.,REGISTERS,CONCEPTUAL,EASY,1
+2025,CAT1,95,Computer architecture and Design,What is clock speed in a processor?,CLOCK SPEED,CONCEPTUAL,EASY,1
+2021,FAT,96,Computer architecture and Design,Explain the function of control unit in instruction execution. Mention how it coordinates between processor components.,CONTROL UNIT,THEORY,MODERATE,1
+2025,CAT2,97,Computer architecture and Design,Describe different types of addressing modes used in instruction set architecture.,ADDRESSING MODES,THEORY,MODERATE,1
+2024,CAT2,98,Computer architecture and Design,Explain how cache memory reduces average memory access time.,CACHE MEMORY,THEORY,MODERATE,1
+2022,CAT1,99,Computer architecture and Design,Describe the structure of a microprogrammed control unit and compare it with hardwired control.,CONTROL UNIT,ANALYSIS BASED,MODERATE,1
+2025,CAT1,100,Computer architecture and Design,Explain how DMA allows peripheral devices to access memory without CPU intervention.,DMA,THEORY,MODERATE,1
+2024,FAT,101,Computer architecture and Design,Describe instruction pipeline hazards and how forwarding reduces stalls.,PIPELINE HAZARDS,ANALYSIS BASED,MODERATE,1
+2023,CAT2,102,Computer architecture and Design,Explain how virtual memory uses paging to extend usable memory while isolating processes.,VIRTUAL MEMORY,THEORY,MODERATE,1
+2022,FAT,103,Computer architecture and Design,Discuss hierarchy of buses in processor architecture and their role in communication.,SYSTEM BUS,CONCEPTUAL,MODERATE,1
+2025,CAT2,104,Computer architecture and Design,"A smartphone processor must manage multiple background apps efficiently. Discuss how multi-level cache hierarchy improves performance, explain cache coherence problems, and evaluate impact if cache replacement policy is suboptimal.",CACHE COHERENCE,ANALYSIS BASED,HARD,1
+2024,CAT1,105,Computer architecture and Design,"An autonomous vehicle requires low-latency response from sensors to CPUs. Explain how pipelining and parallel execution units improve throughput, and analyze how branch prediction failure affects safety-critical performance.",PIPELINING,ANALYSIS BASED,HARD,1
+2025,FAT,106,Computer architecture and Design,"A server processor handles simultaneous database transactions. Explain how memory hierarchy and bus arbitration ensure efficient access, and analyze consequences of bus contention.",BUS ARBITRATION,ANALYSIS BASED,HARD,1
+2025,FAT,107,Computer architecture and Design,A fault-tolerant system mirrors instructions across multiple processors. Explain how control units synchronize execution and discuss failure handling mechanism in case one processor diverges.,CONTROL SYNCHRONIZATION,ANALYSIS BASED,HARD,1
+2025,CAT1,108,Analysis of Algorithm,What is time complexity?,TIME COMPLEXITY,CONCEPTUAL,EASY,1
+2025,FAT,109,Analysis of Algorithm,Define polynomial time algorithm.,COMPLEXITY CLASSES,CONCEPTUAL,EASY,1
+2023,CAT2,110,Analysis of Algorithm,What is divide and conquer strategy?,DIVIDE AND CONQUER,CONCEPTUAL,EASY,1
+2022,CAT2,111,Analysis of Algorithm,Explain the concept of dynamic programming and how overlapping subproblems are reused to reduce computation.,DYNAMIC PROGRAMMING,THEORY,MODERATE,1
+2022,CAT2,112,Analysis of Algorithm,Explain greedy choice property with an example problem.,GREEDY,THEORY,MODERATE,1
+2025,CAT2,113,Analysis of Algorithm,Describe the recurrence T(n)=T(n/2)+n and solve it using Master Theorem.,RECURRENCE,NUMERICAL,MODERATE,1
+2021,CAT1,114,Analysis of Algorithm,Explain how Floyd-Warshall algorithm determines all-pairs shortest path.,GRAPH ALGORITHMS,ANALYSIS BASED,MODERATE,1
+2022,FAT,115,Analysis of Algorithm,Describe Knapsack problem and how DP solves it optimally.,KNAPSACK,ANALYSIS BASED,MODERATE,1
+2024,CAT1,116,Analysis of Algorithm,Explain backtracking with N-Queens problem example.,BACKTRACKING,ANALYSIS BASED,MODERATE,1
+2021,FAT,117,Analysis of Algorithm,Explain how divide and conquer applies to merge sort and derive its complexity.,SORTING,THEORY,MODERATE,1
+2024,CAT1,118,Analysis of Algorithm,Describe role of memoization in optimization problems.,MEMOIZATION,THEORY,MODERATE,1
+2022,CAT2,119,Analysis of Algorithm,A ride-sharing platform must optimize cost and travel time across multiple drivers and passengers. Explain how shortest path and minimum spanning tree algorithms help reduce route cost. Discuss time complexity challenges in real-time routing.,OPTIMIZATION,ANALYSIS BASED,HARD,1
+2024,CAT2,120,Analysis of Algorithm,An airline ticketing system allocates cheapest seats dynamically. Explain greedy strategy usage and evaluate cases where greedy fails compared to dynamic programming.,GREEDY VS DP,ANALYSIS BASED,HARD,1
+2021,CAT2,121,Analysis of Algorithm,An e-commerce site suggests product recommendations based on customer preference graphs. Explain how DFS/BFS traversal determines similarity and analyze complexity under rapid data growth.,GRAPH SEARCH,ANALYSIS BASED,HARD,1
+2022,CAT1,122,Analysis of Algorithm,A compiler must prune invalid expression combinations while searching optimal instruction sequences. Explain how branch pruning reduces backtracking space and analyze worst-case complexity.,BACKTRACKING OPTIMIZATION,ANALYSIS BASED,HARD,1
+2024,CAT2,123,Artificial Intelligence,"a) Describe different approaches to Artificial Intelligence. List the timeline of the evolution
+of artificial intelligence and briefly describe each period/breakthrough.
+[5 M]
+b) Consider an artificial agent learning to play chess, where the agent learns the game's rules
+and optimal moves through multiple plays and feedback from critics. Which type of agent
+would be most suitable for a chess-playing agent? Justify your answer. Also, briefly describe
+the agent architecture with a suitable diagram",ARTIFICIAL AGENT,THEORY,MODERATE,1
+2024,CAT2,124,Artificial Intelligence,"Describe the task environments and their characteristics for the following agents.
+i. Rental Bike/Car booking
+ii. Cooking Robot
+iii. Grocery Delivery
+iv. Playing Chess",PEAS,ANALYSIS,MODERATE,1
+2024,CAT2,125,Artificial Intelligence,"Explain each step of the genetic algorithm with correct terminology in detail using the eight-
+queen problem and appropriate examples. Calculations must be provided along with the
+steps when necessary",GENETIC ALGORITHM,CONCEPTUAL,HARD,1
+2024,CAT1,126,Artificial Intelligence,"Illustrate the PEAS components and classify the environment type for the provided scenarios,
+a) Customer browsing an online shopping website
+b) Chatbot customer service
+c) Home automation system",PEAS,ANALYSIS,MODERATE,1
+2024,CAT1,127,Artificial Intelligence,"a) Consider a scenario where a bank wants to enhance its fraud detection system. Justify how Al can identify fraudulent transactions, prevent money laundering and improve risk assessment. (5 marks)
+b) Illustrate how the subfield of Al Expert system works and where is it typically applied? (5 marks)",RISK ASSESSMENT,ANALYSIS,MODERATE,1
+2024,CAT1,128,Artificial Intelligence,"A manufacturing plant aims to create an optimal production schedule that reduces production time and efficiently utilizes resources. Discuss how hill climbing could be applied to determine a feasible schedule, highlighting potential obstacles. Also, illustrate how simulated annealing can be used to overcome suboptimal solutions and achieve a better schedule.",SIMULATED ANNEALING,ANALYSIS,HARD,1
+2024,CAT1,129,Artificial Intelligence,"a) Suppose a genetic algorithm uses chromosomes of the form x = abcdefgh 
+with a fixed length of eight genes. Each gene can be any digit between 0 
+and 9. Let the fitness of individual x be calculated as: 
+ f(x)=(a+b)-(c+d)+(e+f)-(g+h)
+and let the initial population consist of four individuals with the following 
+chromosomes: 
+x1 = 6 5 4 1 3 5 3 2,
+x2 = 8 7 1 2 6 6 0 1 ,
+x3 = 2 3 9 2 1 2 8 5 ,
+x4 = 4 1 8 5 2 0 9 4 
+ 
+Evaluate each individual's fitness, showing all your workings and arrange 
+them in order with the fittest first and the least fit last.
+b) With a neat sketch of the hill-climbing algorithm's state-space landscape, 
+explain why the hill-climbing search gets struck. List the variants of the hill 
+climbing algorithm and describe how they overcome this problem",GENETIC ALGORITHM,NUMERICAL,MODERATE,2
+2025,FAT,130,Computer Networks,"A company wants to design a network for its new office building that spans four floors. The IT team needs to connect various departments such as finance, HR, and engineering located on different floors. The network must support high-speed internet access, secure communications, and the ability to handle large amounts of data being transferred within the office.
+The following requirements must be met.
+a) Each department should have its own dedicated segment to reduce traffic congestion.
+b) The network should be scalable to accommodate future expansions.
+c) Security is important, so there must be provisions for isolating department and preventing unauthorized access to data.
+d) A wireless network should cover common areas like the lobby and cafeteria.",VLAN ,TECHNICAL,HARD,2
+2023,CAT1,131,Artificial Intelligence,"An Al agent is supposed to manage the energy consumption of a smart home. The agent's objective is to minimize the electricity bill while ensuring the residents' comfort. It has access to weather forecasts, real-time electricity pricing from the grid, and sensors in each room (temperature, occupancy). It can control the heating, ventilation, and air conditioning (HVAC) system, the smart lighting, and high-consumption appliances like the dishwasher and washing machine.
+What is the correct PEAS categorization for this agent? Classify this task environment according to the following properties- Deterministic vs. Stochastic, Static vs. Dynamic, and Episodic vs. Sequential, and briefly justify your choices. What strategy should the agent adopt to effectively balance cost minimization with maintaining comfort?",PEAS ,ANALYSIS,HARD,2
+2025,CAT1,132,Microprocessor and Microcontroller,"With the help of interrupt programming, develop an ALP of 8051 microcontrollers to perform
+the following tasks; continuously get numeric data from P0 and send it to P1. If the data is even,
+serially send it through port P2 with a baud rate of 19200. Otherwise, the data will be sent
+through P2 with a baud rate of 9600",ARCHITECTURE,THEORY,EASY,1
+2022,CAT1,133,Microprocessor and Microcontroller,Explain the concept of addressing modes in the context of Microprocessor and Microcontroller. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,ADDRESSING MODES,THEORY,EASY,1
+2021,CAT1,134,Microprocessor and Microcontroller,Explain the concept of interrupts in the context of Microprocessor and Microcontroller. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,INTERRUPTS,THEORY,EASY,1
+2021,CAT1,135,Microprocessor and Microcontroller,Explain the concept of timers in the context of Microprocessor and Microcontroller. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,TIMERS,THEORY,EASY,1
+2022,CAT1,136,Microprocessor and Microcontroller,Explain the concept of i/o ports in the context of Microprocessor and Microcontroller. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,I/O PORTS,THEORY,EASY,1
+2023,CAT2,137,Microprocessor and Microcontroller,Discuss the working principles of instruction set within Microprocessor and Microcontroller systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,INSTRUCTION SET,CONCEPTUAL,MODERATE,1
+2021,CAT2,138,Microprocessor and Microcontroller,"A football stadium is designed with a seating capacity of precisely 1000 persons. It is assumed
+that there is just one entry and exit gate accessible within the stadium. The entry gate is
+configured so that whenever a person enters a stadium, a high-to-low pulse will be generated and
+that will be given to the port3.4 of the 8051 microcontroller. The stepper motor regulates the
+opening and shutting of the entry gate. To open/close the entry gate, send a logic 1/logic 0 to
+10
+port0.5 of the 8051 microcontroller, which connects to the stepper motor. Develop an ALP of
+8051 that counts and allows maximum up to 1000 persons and closes the gate after that
+irrespective of persons leaving from the exit gate. Use the mode 2 timer programming",MEMORY INTERFACING,CONCEPTUAL,MODERATE,1
+2025,CAT2,139,Microprocessor and Microcontroller,Discuss the working principles of adc/dac within Microprocessor and Microcontroller systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,ADC/DAC,CONCEPTUAL,MODERATE,1
+2022,CAT2,140,Microprocessor and Microcontroller,Discuss the working principles of serial communication within Microprocessor and Microcontroller systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,SERIAL COMMUNICATION,CONCEPTUAL,MODERATE,1
+2025,CAT2,141,Microprocessor and Microcontroller,Discuss the working principles of stack operations within Microprocessor and Microcontroller systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,STACK OPERATIONS,CONCEPTUAL,MODERATE,1
+2024,FAT,142,Microprocessor and Microcontroller,Develop an 8051 ALP in which 8051 gets data from P1 and sends it to P2 continuously while incoming data from the serial port is sent to PO. Assume that XTAL=11.0592 MHz. Set the baud rate at 9600.,ASSEMBLY,ANALYSIS,HARD,2
+2024,FAT,143,Microprocessor and Microcontroller,"Explain the concept of interrupt handling in an 8-bit embedded system. How does the processor manage multiple interrupts, and what is the significance of interrupt prioritization in embedded systems?",MICROCONTROLLER APPLICATIONS,ANALYSIS,HARD,1
+2023,FAT,144,Microprocessor and Microcontroller,Develop an 8051 ALP in which 8051 gets data from P1 and sends it to P2 continuously while incoming data from the serial port is sent to PO. Assume that XTAL=11.0592 MHz. Set the baud rate at 9600.,ASSEMBLY,ANALYSIS,HARD,2
+2022,FAT,145,Microprocessor and Microcontroller,"Consider a real-world system where flag register plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",FLAG REGISTER,ANALYSIS,HARD,1
+2021,FAT,146,Microprocessor and Microcontroller,"Develop an 8051 assembly code to display the string ""HELLO"" on a common cathode 7-segment display with a 500ms interval between each character. Assume that the pattern for ""H"", ""E"", ""L"", ""L"", ""O"" are stored in ROM starting at 400H. Use Timer 1 to generate 500ms of delay.",ASSEMBLY,ANALYSIS,HARD,1
+2023,CAT1,147,Compiler Design,Explain the concept of lexical analysis in the context of Compiler Design. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,LEXICAL ANALYSIS,THEORY,EASY,1
+2025,CAT1,148,Compiler Design,Explain the concept of parsing in the context of Compiler Design. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,PARSING,THEORY,EASY,1
+2022,CAT1,149,Compiler Design,Explain the concept of syntax tree in the context of Compiler Design. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,SYNTAX TREE,THEORY,EASY,1
+2021,CAT1,150,Compiler Design,Explain the concept of intermediate code in the context of Compiler Design. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,DMA OPERATIONS,THEORY,EASY,1
+2022,CAT1,151,Compiler Design,Explain the concept of symbol table in the context of Compiler Design. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,SYMBOL TABLE,THEORY,EASY,1
+2021,CAT2,152,Compiler Design,Discuss the working principles of semantic analysis within Compiler Design systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,SEMANTIC ANALYSIS,CONCEPTUAL,MODERATE,1
+2023,CAT2,153,Compiler Design,Discuss the working principles of code optimization within Compiler Design systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,CODE OPTIMIZATION,CONCEPTUAL,MODERATE,1
+2024,CAT2,154,Compiler Design,Discuss the working principles of code generation within Compiler Design systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,CODE GENERATION,CONCEPTUAL,MODERATE,1
+2021,CAT2,155,Compiler Design,Discuss the working principles of regular expressions within Compiler Design systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,REGULAR EXPRESSIONS,CONCEPTUAL,MODERATE,1
+2024,CAT2,156,Compiler Design,Discuss the working principles of dfa/nfa within Compiler Design systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,DFA/NFA,CONCEPTUAL,MODERATE,1
+2023,FAT,157,Compiler Design,"Consider a real-world system where type checking plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",TYPE CHECKING,ANALYSIS,HARD,1
+2024,FAT,158,Compiler Design,"Consider a real-world system where runtime environment plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",RUNTIME ENVIRONMENT,ANALYSIS,HARD,1
+2023,FAT,159,Compiler Design,"Consider a real-world system where activation records plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",ACTIVATION RECORDS,ANALYSIS,HARD,1
+2023,FAT,160,Compiler Design,"Consider a real-world system where garbage collection plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",GARBAGE COLLECTION,ANALYSIS,HARD,1
+2021,FAT,161,Compiler Design,"Consider a real-world system where linking and loading plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",LINKING AND LOADING,ANALYSIS,HARD,1
+2022,CAT1,162,Embedded Systems,Explain the concept of embedded architecture in the context of Embedded Systems. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,EMBEDDED ARCHITECTURE,THEORY,EASY,1
+2024,CAT1,163,Embedded Systems,Explain the concept of rtos in the context of Embedded Systems. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,RTOS,THEORY,EASY,1
+2022,CAT1,164,Embedded Systems,Explain the concept of scheduling in the context of Embedded Systems. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,SCHEDULING,THEORY,EASY,1
+2023,CAT1,165,Embedded Systems,Explain the concept of memory constraints in the context of Embedded Systems. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,MEMORY CONSTRAINTS,THEORY,EASY,1
+2025,CAT1,166,Embedded Systems,Explain the concept of interrupt handling in the context of Embedded Systems. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,INTERRUPT HANDLING,THEORY,EASY,1
+2024,CAT2,167,Embedded Systems,Discuss the working principles of device drivers within Embedded Systems systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,DEVICE DRIVERS,CONCEPTUAL,MODERATE,1
+2025,CAT2,168,Embedded Systems,Discuss the working principles of embedded c within Embedded Systems systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,EMBEDDED C,CONCEPTUAL,MODERATE,1
+2025,CAT2,169,Embedded Systems,Discuss the working principles of communication protocols within Embedded Systems systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,COMMUNICATION PROTOCOLS,CONCEPTUAL,MODERATE,1
+2023,CAT2,170,Embedded Systems,Discuss the working principles of sensor interfacing within Embedded Systems systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,SENSOR INTERFACING,CONCEPTUAL,MODERATE,1
+2024,CAT2,171,Embedded Systems,Discuss the working principles of actuators within Embedded Systems systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,ACTUATORS,CONCEPTUAL,MODERATE,1
+2025,FAT,172,Embedded Systems,"Consider a real-world system where power management plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",POWER MANAGEMENT,ANALYSIS,HARD,1
+2021,FAT,173,Embedded Systems,"Consider a real-world system where firmware design plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",FIRMWARE DESIGN,ANALYSIS,HARD,1
+2021,FAT,174,Embedded Systems,"Consider a real-world system where state machines plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",STATE MACHINES,ANALYSIS,HARD,1
+2023,FAT,175,Embedded Systems,"Consider a real-world system where embedded security plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",EMBEDDED SECURITY,ANALYSIS,HARD,1
+2025,FAT,176,Embedded Systems,"Consider a real-world system where testing and debugging plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",TESTING AND DEBUGGING,ANALYSIS,HARD,1
+2025,CAT1,177,Software Engineering,Explain the concept of sdlc in the context of Software Engineering. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,SDLC,THEORY,EASY,1
+2021,CAT1,178,Software Engineering,Explain the concept of requirements analysis in the context of Software Engineering. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,REQUIREMENTS ANALYSIS,THEORY,EASY,1
+2022,CAT1,179,Software Engineering,Explain the concept of design patterns in the context of Software Engineering. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,DESIGN PATTERNS,THEORY,EASY,1
+2023,CAT1,180,Software Engineering,Explain the concept of uml in the context of Software Engineering. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,UML,THEORY,EASY,1
+2023,CAT1,181,Software Engineering,Explain the concept of agile in the context of Software Engineering. Describe its purpose and how it is applied in real systems. Provide a simple example that demonstrates its use.,AGILE,THEORY,EASY,1
+2021,CAT2,182,Software Engineering,Discuss the working principles of waterfall within Software Engineering systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,WATERFALL,CONCEPTUAL,MODERATE,1
+2022,CAT2,183,Software Engineering,Discuss the working principles of testing strategies within Software Engineering systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,TESTING STRATEGIES,CONCEPTUAL,MODERATE,1
+2024,CAT2,184,Software Engineering,Discuss the working principles of version control within Software Engineering systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,VERSION CONTROL,CONCEPTUAL,MODERATE,1
+2023,CAT2,185,Software Engineering,Discuss the working principles of software metrics within Software Engineering systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,SOFTWARE METRICS,CONCEPTUAL,MODERATE,1
+2025,CAT2,186,Software Engineering,Discuss the working principles of risk management within Software Engineering systems. Describe practical use cases where this concept is essential. Compare it with at least one alternative approach. Include a multi-step example to illustrate your explanation.,RISK MANAGEMENT,CONCEPTUAL,MODERATE,1
+2024,FAT,187,Software Engineering,"Consider a real-world system where architecture styles plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",ARCHITECTURE STYLES,ANALYSIS,HARD,1
+2022,FAT,188,Software Engineering,"Consider a real-world system where refactoring plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",REFACTORING,ANALYSIS,HARD,1
+2025,FAT,189,Software Engineering,"Consider a real-world system where devops plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",DEVOPS,ANALYSIS,HARD,1
+2024,FAT,190,Software Engineering,"Consider a real-world system where maintainability plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",MAINTAINABILITY,ANALYSIS,HARD,1
+2022,FAT,191,Software Engineering,"Consider a real-world system where project management plays a critical role. Describe the architecture and operational flow in detail. Analyze the challenges that arise when implementing this concept. Explain how the system ensures reliability and performance. Finally, evaluate optimization strategies and justify the best one.",PROJECT MANAGEMENT,ANALYSIS,HARD,1

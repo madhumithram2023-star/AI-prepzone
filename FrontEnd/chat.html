@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Brand Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1a202c);
+            color: #e2e8f0;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            
+            width: 100%; 
+            max-width: 1200px; /* Optional: Limit max width of the whole chat interface on very large screens */
+            display: flex;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+        }
+
+        .chat-container {
+            width: 100%;
+            flex-grow: 1; /* Allows it to expand to fill available space */
+            min-width: 300px; 
+            background: #1f2937;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+            overflow: hidden;
+            border: 1px solid #2d3748;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .chat-container:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+        .chat-container:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .chat-header {
+            background: linear-gradient(90deg, #312e81, #4f46e5);
+            color: #e2e8f0;
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #3d3b6f;
+            border-top-left-radius: 19px;
+            border-top-right-radius: 19px;
+        }
+
+        .chat-header svg {
+            margin-right: 0.75rem;
+            height: 1.75rem;
+            width: 1.75rem;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: #1a202c;
+        }
+
+        .message {
+            padding: 1rem 1.25rem;
+            border-radius: 1.25rem;
+            line-height: 1.4;
+            max-width: 80%;
+            word-wrap: break-word;
+            animation: fadeIn 0.3s ease-in-out;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .user-message {
+            background-color: #312e81;
+            color: #ffffff;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .bot-message {
+            background-color: #4f46e5;
+            color: #e2e8f0;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+            border-radius: 9px;
+        }
+
+        .input-form {
+            padding: 1.25rem 1.5rem;
+            border-top: 1px solid #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: #1a202c;
+            border-bottom-left-radius: 19px;
+            border-bottom-right-radius: 19px;
+        }
+
+        .input-field {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            border: 2px solid #4a5568;
+            background-color: #2d3748;
+            color: #e2e8f0;
+            border-radius: 9999px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+        }
+
+        .send-button {
+            background-color: #4f46e5;
+            color: #ffffff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+            border: none;
+        }
+
+        .send-button:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+        }
+
+        .loading-dots {
+            display: none;
+            align-self: flex-start;
+            background-color: #4f46e5;
+            color: #e0e0e0;
+            padding: 1rem 1.25rem;
+            border-radius: 1.25rem;
+            border-bottom-left-radius: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            height: 2.5rem;
+            line-height: 0;
+        }
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            animation: bounce 1s infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21v-4.5m1.5 4.5h-3m3-4.5h-3m6-2.25V7.5m3 4.5H12m-3 2.25-1.5-1.5m1.5 1.5 1.5 1.5m-1.5-1.5h-3m2.25-4.5h-3m3 2.25V7.5m3 4.5h-3m2.25-4.247c1.78-.307 3.448-.472 5.12-2.173M12 21c-1.89 0-3.75-1.076-4.5-2.25s-.75-2.883-1.5-4.247m10.5 0c.75 1.364.75 2.883 1.5 4.247m-1.5 0a9.004 9.004 0 0 0-8.716 6.747" />
+                </svg>
+                <span>Question Paper Chat</span>
+            </div>
+            <div id="chat-messages-1" class="chat-messages">
+                <div class="bot-message">! Hello! I'm your Question Paper Assistant. Ask me for past exam questions by year or topic.</div>
+            </div>
+            <form id="input-form-1" class="input-form">
+                <input type="text" id="user-input-1" class="input-field" placeholder="E.g., '2 questions from AI in 2023'">
+                <button type="submit" id="send-button-1" class="send-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M3.478 2.405a.75.75 0 0 0-.926.94l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.981.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.405Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.946-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.946.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 9l-1.035.259a3.375 3.375 0 0 0-2.456 2.455ZM19.5 15.75l-1.5 1.5 1.5 1.5m-1.5-1.5h6" />
+                </svg>
+                <span>Gemini API Overview</span>
+            </div>
+            <div id="chat-messages-2" class="chat-messages">
+                <div class="bot-message">Paste a question here to get a brief overview of the answer.</div>
+            </div>
+            <form id="input-form-2" class="input-form">
+                <input type="text" id="user-input-2" class="input-field" placeholder="Paste a question here...">
+                <button type="submit" id="send-button-2" class="send-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M3.478 2.405a.75.75 0 0 0-.926.94l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.981.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.405Z" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const chatMessages1 = document.getElementById('chat-messages-1');
+        const inputForm1 = document.getElementById('input-form-1');
+        const userInput1 = document.getElementById('user-input-1');
+        const chatMessages2 = document.getElementById('chat-messages-2');
+        const inputForm2 = document.getElementById('input-form-2');
+        const userInput2 = document.getElementById('user-input-2');
+
+        const sessionId1 = `session-${Math.random().toString(36).substring(7)}`;
+    const sessionId2 = `session-${Math.random().toString(36).substring(7)}`;
+
+    function addMessage(chatMessages, text, sender) {
+        // ... (Keep existing addMessage function) ...
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+        messageElement.innerHTML = text;
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    async function sendMessage(url, message, sessionId, chatMessages, userInput) {
+        addMessage(chatMessages, message, 'user');
+        userInput.value = '';
+
+        // --- 1. CREATE LOADING INDICATOR AND MAKE IT VISIBLE ---
+        const loadingIndicator = document.createElement('div');
+        loadingIndicator.classList.add('loading-dots');
+        // Setting the style to 'flex' makes the dots visible (overriding display: none in CSS)
+        loadingIndicator.style.display = 'flex'; 
+        loadingIndicator.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+        chatMessages.appendChild(loadingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        // --- END LOADING INDICATOR SETUP ---
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message, sessionId: sessionId }),
+            });
+
+            const data = await response.json();
+            // --- 2. REMOVE (HIDE) LOADING INDICATOR ON SUCCESS ---
+            loadingIndicator.remove(); 
+            
+            if (data.fulfillmentText && chatMessages === chatMessages1) {
+                addMessage(chatMessages, data.fulfillmentText, 'bot');
+            } else if (data.response) {
+                addMessage(chatMessages, data.response, 'bot');
+            } else {
+                addMessage(chatMessages, '<b>Error:</b> Received an unexpected empty response from the server.', 'bot');
+            }
+
+        } catch (error) {
+            console.error('Error with server call:', error);
+            // --- 3. REMOVE (HIDE) LOADING INDICATOR ON ERROR ---
+            loadingIndicator.remove(); 
+            addMessage(chatMessages, '<b>Oops!</b> There was a problem connecting to the server. Please check both backends are running.', 'bot');
+        }
+    }
+
+        // Section 1: CSV Chat
+        inputForm1.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const query = userInput1.value.trim();
+            if (query) {
+                const renderUrl = 'https://ai-prep-zone-backend.onrender.com/chat';
+                sendMessage(renderUrl, query, sessionId1, chatMessages1, userInput1);
+            }
+        });
+
+        // Section 2: API Chat
+        inputForm2.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const query = userInput2.value.trim();
+            if (query) {
+                const renderUrl = 'https://ai-prep-zone-backend.onrender.com/api_chat';
+                sendMessage(renderUrl, query, sessionId2, chatMessages2, userInput2);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Prepzone - Your Smart Study Companion</title>
+    <meta name="description" content="Generate custom quizzes and analyze question papers with AI. Your ultimate exam preparation tool powered by advanced AI technology." />
+    <meta name="author" content="AI Prepzone" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        :root {
+            --radius: 0.5rem;
+            
+            /* Dark Mode Base Colors */
+            --background: 222.2 84% 4.9%; /* Very dark background */
+            --foreground: 210 40% 98%; /* Light text */
+            --card: 222.2 47.4% 11.2%; /* Dark card background */
+            --border: 217.2 32.6% 17.5%; /* Dark gray border */
+            --muted-foreground: 215.4 16.3% 56.9%; /* Muted gray text */
+
+            /* Primary (Accent 1 - Rocket/Brain) */
+            --primary: 262 83% 70%; /* Bright Purple */
+            --primary-foreground: 222.2 47.4% 11.2%; /* Dark text on bright button */
+            --primary-glow: 270 80% 80%;
+
+            /* Secondary (Accent 2 - Analysis) */
+            --secondary: 140 65% 40%;
+ /* Light Yellow/Cream */
+            --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on light button */
+            --secondary-glow: 60 100% 95%;
+        }
+
+        .glass {
+            background-color: hsla(var(--card), 0.5); /* Semi-transparent card background */
+            backdrop-filter: blur(8px);
+            border: 1px solid hsla(var(--border), 0.3);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="root" class="min-h-screen w-full font-poppins overflow-x-hidden">
+        <div class="fixed inset-0 overflow-hidden pointer-events-none">
+            <div class="orb primary-orb"></div>
+            <div class="orb secondary-orb"></div>
+        </div>
+
+        <header class="header">
+            <div class="logo-container">
+                <div class="icon-wrapper">
+                    <div class="icon-glow"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon rocket-icon"><path d="M4.5 5.5l5.5-3.5L15 5.5"/><path d="M12 2v20"/><path d="M4.5 18.5l5.5 3.5L15 18.5"/><path d="M15 5.5L19.5 8l-2 5l-2.5 3.5"/><path d="M4.5 5.5L11 9l-2.5 7.5L4.5 18.5"/><path d="M17 11.5L22 13"/><path d="M2 13L7 11.5"/></svg>
+                </div>
+                <div>
+                    <h1 class="header-title">AI Prepzone</h1>
+                    <p class="header-subtitle">Your Smart Study Companion</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section" id="fade-in-element">
+                <div class="inline-badge glass">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-icon"><path d="M12 20v-8"/><path d="M16 16h-4"/><path d="M12 20l3-5l4.5-1.5L12 20z"/><path d="M12 4v4"/><path d="M16 8h-4"/><path d="M12 4l3 5l4.5 1.5L12 4z"/><path d="M12 12l-3-5l-4.5-1.5L12 12z"/><path d="M12 12l-3 5l-4.5 1.5L12 12z"/></svg>
+                    <span class="badge-text">Powered by Advanced AI</span>
+                </div>
+                <h2 class="hero-title">
+                    Choose Your
+                    <span class="hero-gradient-text">
+                        Learning Tool
+                    </span>
+                </h2>
+                <p class="hero-subtitle">
+                    Select a feature below to begin your exam preparation and analysis journey
+                </p>
+            </div>
+
+            <div class="feature-cards-grid">
+                <div class="feature-card-wrapper group">
+                    <div class="glow-effect primary-glow"></div>
+                    <div class="feature-card primary-card">
+                        <div class="card-icon-container">
+                            <div class="card-icon-bg primary-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><path d="M12 2v20"/><path d="M18.5 4.5l-3.5 3.5-3.5-3.5"/><path d="M5.5 4.5l3.5 3.5 3.5-3.5"/><path d="M12 12v8"/><path d="M18.5 19.5l-3.5-3.5-3.5 3.5"/><path d="M5.5 19.5l3.5-3.5-3.5 3.5"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="content-body">
+                            <h3 class="card-title">Quiz Generator</h3>
+                            <p class="card-description">
+                                Generate custom, multi-type quizzes instantly from any topic.
+                                Perfect for quick revision and targeted practice.
+                            </p>
+                        </div>
+
+                        <a href="quiz.html" class="cta-button primary-cta">
+    <span>Start Preparation</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+</a>
+                    </div>
+                </div>
+
+                <div class="feature-card-wrapper group">
+                    <div class="glow-effect secondary-glow"></div>
+                    <div class="feature-card secondary-card">
+                        <div class="card-icon-container">
+                            <div class="card-icon-bg secondary-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="content-body">
+                            <h3 class="card-title">QP Fetcher</h3>
+                            <p class="card-description">
+                                A Dual-Chat AI Interface Ask questions directly or paste any question into the chat — get instant, in-depth explanations powered by AI.
+                            </p>
+                            </p>
+                        </div>
+
+                        <button class="cta-button secondary-cta" id="back-btn">
+                            <span>Fetch Questions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-list-container">
+                <div class="features-list-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper primary-text glass">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><path d="M12 20v-8"/><path d="M16 16h-4"/><path d="M12 20l3-5l4.5-1.5L12 20z"/><path d="M12 4v4"/><path d="M16 8h-4"/><path d="M12 4l3 5l4.5 1.5L12 4z"/><path d="M12 12l-3-5l-4.5-1.5L12 12z"/><path d="M12 12l-3 5l-4.5 1.5L12 12z"/></svg>
+                        </div>
+                        <h4 class="feature-title">AI-Powered</h4>
+                        <p class="feature-description">Advanced algorithms for accurate analysis</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper primary-text glass">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><path d="M12 2v20"/><path d="M18.5 4.5l-3.5 3.5-3.5-3.5"/><path d="M5.5 4.5l3.5 3.5 3.5-3.5"/><path d="M12 12v8"/><path d="M18.5 19.5l-3.5-3.5-3.5 3.5"/><path d="M5.5 19.5l3.5-3.5-3.5 3.5"/></svg>
+                        </div>
+                        <h4 class="feature-title">Smart Learning</h4>
+                        <p class="feature-description">Adaptive content generation</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper secondary-text glass">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                        </div>
+                        <h4 class="feature-title">Deep Insights</h4>
+                        <p class="feature-description">Comprehensive analysis and trends</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">
+                © 2025 AI Prepzone. Built with Madhu and Jithu❤
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

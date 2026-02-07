@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="quizpage.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1 id="quiz-topic-title"></h1>
+
+<!-- Loading Screen -->
+<div id="initial-loading" style="text-align:center; padding:50px;">
+  <h2>Generating Quiz...</h2>
+  <p>Please wait</p>
+</div>
+<div class="quiz-wrapper">
+    <div id="quiz-progress"></div>
+
+
+  <div id="quiz-area">
+    <div id="question-container"></div>
+    <button id="submit-btn" style="display:none;">Submit</button>
+  </div>
+
+  <!-- Results Screen -->
+  <div id="result-area" style="display:none; text-align:center;">
+    <h2 id="score-text"></h2>
+    <canvas id="result-chart" width="200" height="200"></canvas>
+    <button id="review-btn">Review Answers</button>
+    <button id="play-again-btn">Play Again</button>
+    <button id="back-btn">Back Home</button>
+  </div>
+
+  <!-- Review Screen -->
+  <div id="review-area" style="display:none;">
+    <h2>Review Your Answers</h2>
+    <div id="review-container"></div>
+    <button id="back-to-results-btn">Back</button>
+  </div>
+
+</div>
+
+<script src="quizpage.js"></script>
+
+</body>
+</html>
