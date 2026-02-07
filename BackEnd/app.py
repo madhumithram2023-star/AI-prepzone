@@ -46,7 +46,16 @@ user_sessions = {}
 app = Flask(__name__)
 CORS(app)
 
-
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "AI Prepzone backend is running 🚀",
+        "active_file": "app.py",
+        "available_endpoints": [
+            "/api_chat (POST)",
+            "/chat (POST)"
+        ]
+    })
 try:
     df = pd.read_csv("QUESTIONPAPER.csv", encoding="latin1")
     df.columns = df.columns.str.lower()

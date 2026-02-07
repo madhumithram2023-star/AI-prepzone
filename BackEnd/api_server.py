@@ -20,11 +20,23 @@ except Exception as e:
 
 user_sessions = {}
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "AI Prepzone backend is running 🚀",
+        "endpoints": {
+            "interactive_chat": "/interactive-chat (POST)",
+            "api_chat": "/api_chat (POST)",
+            "reset_session": "/reset-session (POST)"
+        }
+    })
 
 @app.route("/interactive-chat", methods=["POST"])
 def interactive_chat():
     data = request.get_json()
-
+         if model is None:
+        return jsonify({"error": "AI model not initialized"}), 500
+        
     session_id = data.get("sessionId", "default-session")
     incoming_text = data.get("message", "").strip()
 
