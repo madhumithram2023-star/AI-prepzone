@@ -127,6 +127,7 @@ def home():
         }
     })
 
+
 # Route for Dialogflow / CSV Analysis
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -166,48 +167,22 @@ def api_chat():
 def generate_questions():
     data = request.get_json()
     topic = data.get("topic")
-    count = int(data.get("count", 5))
-    difficulty = data.get("difficulty", "medium")
-
-    if not topic:
-        return jsonify({"error": "Topic is required"}), 400
-
-    # We tell the AI to ONLY give us the code, no chatting!
-    prompt = f"""
-    Generate {count} multiple-choice questions on the topic "{topic}".
-    Difficulty level: {difficulty}.
-    Return ONLY a raw JSON object. Do not include markdown formatting or backticks.
-    Format:
-    {{
-      "questions": [
-        {{
-          "question": "...",
-          "options": ["A", "B", "C", "D"],
-          "answer": "A",
-          "explanation": "..."
-        }}
-      ]
-    }}
-    """
-
+    
     try:
+        prompt = f"Generate 5 MCQs on {topic}. Return ONLY raw JSON with keys: questions, options, answer, explanation. No markdown."
         response = model.generate_content(prompt)
-        text = response.text.strip()
-
-        # Safety Net: This removes backticks (```json) if the AI adds them
-        clean_json = re.sub(r'```json|```', '', text).strip()
         
-        # Extract just the part between the first { and the last }
-        start = clean_json.find("{")
-        end = clean_json.rfind("}") + 1
-        final_json = clean_json[start:end]
-
-        quiz_data = json.loads(final_json)
-        return jsonify(quiz_data)
-
+        # This part removes any extra text the AI might have added
+        text = response.text.strip()
+        json_start = text.find("{")
+        json_end = text.rfind("}") + 1
+        clean_json = text[json_start:json_end]
+        
+        return jsonify(json.loads(clean_json))
     except Exception as e:
-        print(f"Quiz Generation Error: {e}") # This shows the error in Render logs
-        return jsonify({"error": str(e)}), 500
+        print(f"Quiz Error: {e}")
+        return jsonify({"error": "AI could not format the quiz. Please try again."}), 500
+
 # Route for Interactive Session-based Chat
 @app.route("/interactive-chat", methods=["POST"])
 def interactive_chat():
