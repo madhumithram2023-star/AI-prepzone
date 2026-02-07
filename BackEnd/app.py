@@ -161,6 +161,53 @@ def api_chat():
     except Exception as e:
         return jsonify({"response": f"AI Error: {str(e)}"})
 
+
+@app.route("/generate-questions", methods=["POST"])
+def generate_questions():
+    data = request.get_json()
+
+    topic = data.get("topic")
+    count = int(data.get("count", 5))
+    difficulty = data.get("difficulty", "medium")
+
+    if not topic:
+        return jsonify({"error": "Topic is required"}), 400
+
+    prompt = f"""
+Generate {count} multiple-choice questions on the topic "{topic}".
+Difficulty level: {difficulty}.
+
+Each question must include:
+- question
+- 4 options
+- correct answer
+- short explanation
+
+Return STRICT JSON in this format:
+{{
+  "questions": [
+    {{
+      "question": "...",
+      "options": ["A", "B", "C", "D"],
+      "answer": "A",
+      "explanation": "..."
+    }}
+  ]
+}}
+"""
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+
+        # Extract JSON safely
+        json_text = text[text.find("{"): text.rfind("}") + 1]
+        quiz_data = json.loads(json_text)
+
+        return jsonify(quiz_data)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 # Route for Interactive Session-based Chat
 @app.route("/interactive-chat", methods=["POST"])
 def interactive_chat():
