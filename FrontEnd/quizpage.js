@@ -1,8 +1,4 @@
-/**
- * ========================================
- * ⚙️ GLOBAL VARIABLES AND DOM ELEMENTS
- * ========================================
- */
+
 const topic = sessionStorage.getItem("quizTopic");
 const numQuestions = sessionStorage.getItem("numQuestions");
 const difficulty = sessionStorage.getItem("difficulty");
@@ -21,40 +17,26 @@ let currentQuestion = 0;
 let questions = []; 
 let score = 0;
 
-//---
-
-/**
- * ========================================
- * 🚀 QUIZ INITIALIZATION & VISIBILITY
- * ========================================
- */
 document.addEventListener('DOMContentLoaded', () => {
-    
-    
-
     fetchQuiz();
 });
 
-//---
-
-/**
- * ========================================
- * 🌐 QUIZ DATA FETCHING (Improved with Loading/Error Handling)
- * ========================================
- */
 async function fetchQuiz() {
     quizTopicTitle.style.display = "none";
 
     try {
-        const res = await fetch("/generate-questions", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                topic: topic,
-                count: numQuestions,
-                difficulty: difficulty,
-            }),
-        });
+        const res = await fetch(
+  "https://ai-prepzone-backend.onrender.com/generate-questions",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      topic: topic,
+      count: numQuestions,
+      difficulty: difficulty,
+    }),
+  }
+);
         
         if (!res.ok) {
             throw new Error(`Server responded with status: ${res.status}`);
@@ -68,7 +50,6 @@ async function fetchQuiz() {
         
         questions = data.questions;
         
-        // --- SUCCESS: Hide loading, show quiz content ---
         if (initialLoadingDiv) initialLoadingDiv.style.display = 'none';
         if (quizWrapper) quizWrapper.style.display = 'block'; 
         
@@ -77,7 +58,7 @@ async function fetchQuiz() {
     } catch (error) {
         console.error("Error fetching or starting quiz:", error);
         
-        // --- ERROR: Hide loading, show error message in the quiz area ---
+       
         if (initialLoadingDiv) initialLoadingDiv.style.display = 'none';
         if (quizWrapper) quizWrapper.style.display = 'block';
 
@@ -93,17 +74,9 @@ async function fetchQuiz() {
     }
 }
 
-//---
-
-/**
- * ========================================
- * ❓ QUESTION DISPLAY LOGIC
- * ========================================
- */
 function displayQuestion() {
     const q = questions[currentQuestion];
 
-    // ✅ NEW: Update progress display
     document.getElementById("quiz-progress").textContent =
       `Question ${currentQuestion + 1} of ${questions.length}`;
 
@@ -137,13 +110,6 @@ function addOptionListeners() {
     submitBtn.onclick = handleSubmit;
 }
 
-//---
-
-/**
- * ========================================
- * ✍️ ANSWER SUBMISSION & NAVIGATION
- * ========================================
- */
 function handleSubmit() {
     const selected = document.querySelector(".option.selected");
     if (!selected) {
@@ -195,13 +161,7 @@ questionContainer.appendChild(explanation);
     };
 }
 
-//---
 
-/**
- * ========================================
- * 📈 RESULT & REVIEW LOGIC
- * ========================================
- */
 function showResults() {
     document.getElementById("quiz-area").style.display = "none";
     resultArea.style.display = "block";
