@@ -1,13 +1,8 @@
-/* ADD THIS BLOCK AT THE VERY TOP OF YOUR CSS FILE */
 :root {
-    /* --- Your Color Variables --- */
-
-    /* Primary Color (Quiz Generator - Purple/Pink example) */
     --primary: 270 70% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 275 75% 55%;
 
-    /* Secondary Color (QP Analyser - EMERALD GREEN) */
     --secondary: 155 60% 35%; /* The main emerald green color */
     --secondary-foreground: 0 0% 100%; /* White text for contrast */
     --secondary-glow: 160 70% 40%; /* Slightly brighter green for hover/glow */
@@ -20,9 +15,7 @@
     --border: 220 15% 30%;
     --radius: 0.5rem; /* Standard border radius */
 }
-/* END OF NEW ROOT BLOCK */
 
-/* Base Reset and Font */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,13 +26,12 @@ body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6; /* Slightly increased for better readability */
+    line-height: 1.6; /* For better readability */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased; /* Smoother text rendering */
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Utility Classes based on Tailwind/Shadcn */
 .font-poppins {
     font-family: 'Poppins', sans-serif;
 }
@@ -85,14 +77,12 @@ body {
     margin-right: auto;
 }
 
-/* Colors */
 .text-primary { color: hsl(var(--primary)); }
 .text-secondary { color: hsl(var(--secondary)); }
 .text-primary-foreground { color: hsl(var(--primary-foreground)); }
 .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
 .text-muted-foreground { color: hsl(var(--muted-foreground)); }
 
-/* Container */
 .main-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -110,7 +100,6 @@ body {
     }
 }
 
-/* Header */
 .header {
     position: relative;
     z-index: 10;
@@ -195,7 +184,6 @@ body {
     font-weight: 500;
 }
 
-/* --- Hero Section --- */
 .hero-section {
     margin-bottom: 4rem; /* mb-16 */
     opacity: 0;
@@ -366,10 +354,8 @@ body {
     width: 2rem; /* w-8 */
     height: 2rem; /* h-8 */
     color: hsl(var(--foreground));
-    /* This color will be overridden by primary/secondary-text classes in HTML */
 }
 
-/* Content */
 .content-body {
     flex-grow: 1; /* flex-grow */
 }
@@ -388,7 +374,6 @@ body {
     font-weight: 400;
 }
 
-/* CTA Button */
 .cta-button {
     padding: 0.75rem 1.5rem; /* size="lg" */
     font-weight: 600; /* Increased weight */
@@ -459,7 +444,6 @@ body {
     transform: translateX(6px); /* Increased movement */
 }
 
-/* --- Features List --- */
 .features-list-container {
     margin-top: 5rem; /* mt-20 */
     max-width: 56rem; /* max-w-4xl */
@@ -546,8 +530,6 @@ body {
     font-weight: 500;
 }
 
-/* --- Animations --- */
-/* Animated Orbs */
 .orb {
     position: absolute;
     width: 24rem; /* w-96 */
@@ -611,7 +593,6 @@ body {
     }
 }
 
-/* The hero section will use this class */
 .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
 }
